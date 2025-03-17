@@ -5,7 +5,7 @@ export default defineConfig({
     { path: '/login', component: 'login' },
     { path: '/dashboard', component: 'dashboard' },
   ],
-
+  request: {},
   npmClient: 'pnpm',
   tailwindcss: {},
   plugins: [
@@ -13,6 +13,7 @@ export default defineConfig({
     '@umijs/plugins/dist/antd',
     '@umijs/plugins/dist/model',
     '@umijs/plugins/dist/initial-state',
+    '@umijs/plugins/dist/request',
   ],
   antd: {},
   proxy: {
