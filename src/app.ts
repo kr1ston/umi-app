@@ -1,0 +1,31 @@
+import Cookies from 'js-cookie';
+import { history } from 'umi';
+
+// export const getInitialState = async () => {
+//   const token = Cookies.get('token');
+//   return {
+//     token,
+//   };
+// };
+
+export function onRouteChange({ location }: { location: Location }) {
+  console.log(location, 'location');
+  const { pathname } = location;
+
+  const token = Cookies.get('token');
+
+  const loginPath = '/login';
+  const homePath = '/';
+  const whiteList = [loginPath, '/register', 'forget-password'];
+
+  if (token) {
+    if (pathname === loginPath) {
+      history.replace(homePath);
+    }
+  } else {
+    if (whiteList.includes(pathname)) {
+      return;
+    }
+    history.replace(loginPath);
+  }
+}
