@@ -15,7 +15,7 @@ export function onRouteChange({ location }: { location: Location }) {
 
   const loginPath = '/agent';
   const homePath = '/agent';
-  const whiteList = [loginPath, '/register', '/forget-password', '/chat'];
+  const whiteList = [loginPath, '/register', '/forget-password', '/chat', '/agent/test'];
 
   if (token) {
     if (pathname === loginPath) {
