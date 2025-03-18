@@ -1,15 +1,14 @@
 import Cookies from 'js-cookie';
 import { history } from 'umi';
 
-// export const getInitialState = async () => {
-//   const token = Cookies.get('token');
-//   return {
-//     token,
-//   };
-// };
+export async function getInitialState() {
+  const token = Cookies.get('token');
+  return {
+    token,
+  };
+}
 
 export function onRouteChange({ location }: { location: Location }) {
-  console.log(location, 'location');
   const { pathname } = location;
 
   const token = Cookies.get('token');

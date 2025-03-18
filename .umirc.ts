@@ -5,17 +5,19 @@ export default defineConfig({
     { path: '/login', component: 'login' },
     { path: '/dashboard', component: 'dashboard' },
   ],
-  request: {},
   npmClient: 'pnpm',
   tailwindcss: {},
   plugins: [
+    '@umijs/plugins/dist/initial-state',
+    '@umijs/plugins/dist/model',
     '@umijs/plugins/dist/tailwindcss',
     '@umijs/plugins/dist/antd',
-    '@umijs/plugins/dist/model',
-    '@umijs/plugins/dist/initial-state',
     '@umijs/plugins/dist/request',
   ],
   antd: {},
+  initialState: {},
+  model: {},
+  request: {},
   proxy: {
     '/api': {
       target: 'http://localhost:3000',
@@ -25,5 +27,4 @@ export default defineConfig({
       },
     },
   },
-  model: {},
 });

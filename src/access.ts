@@ -1,9 +1,12 @@
-import { getInitialState } from './app';
+// import { getInitialState } from './app';
+import Cookies from 'js-cookie';
 
-export default function (initialState: Awaited<ReturnType<typeof getInitialState>>) {
-  const { token } = initialState || {};
+export default function access() {
+  // const { token } = getInitialState() || {};
+  const token = Cookies.get('token');
 
   return {
     isLogin: !!token,
+    token,
   };
 }
