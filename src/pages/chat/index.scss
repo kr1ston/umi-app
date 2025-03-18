@@ -1,0 +1,12 @@
+.custom-chat {
+  .ant-pro-chat-chat-list-container {
+    //隐藏滚动条
+    &::-webkit-scrollbar {
+      display: none !important;
+    }
+  }
+  
+  .ant-pro-chat-input-area {
+    background-image: none !important;
+  }
+}

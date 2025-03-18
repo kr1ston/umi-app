@@ -3,7 +3,18 @@ import { defineConfig } from 'umi';
 export default defineConfig({
   routes: [
     { path: '/login', component: 'login' },
-    { path: '/dashboard', component: 'dashboard' },
+    {
+      path: '/',
+      routes: [
+        { path: '/dashboard', component: 'dashboard' },
+        { path: '/chat', component: 'chat' },
+        {
+          path: '/agent',
+          wrappers: ['@/pages/agent/wrapper'],
+          routes: [{ path: '/agent/test', component: 'agent' }],
+        },
+      ],
+    },
   ],
   npmClient: 'pnpm',
   tailwindcss: {},

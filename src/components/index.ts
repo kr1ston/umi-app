@@ -1,6 +1,4 @@
-import Foo from './Foo'
+import Foo from './Foo';
+import IconFont from './IconFont';
 
-
-export default {
-	Foo
-}
+export { Foo, IconFont };

@@ -1,0 +1,25 @@
+.layout-bg {
+  background: linear-gradient(
+    350deg,
+    #73c68e 0%,
+    #4cc3a5 16%,
+    #4dbb91 31%,
+    #5aa978 71%,
+    #10533f 100%
+  );
+}
+
+.layout-wrapper {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0%) 0%,
+    #dafded 24%,
+    #dafded 100%
+  );
+}
+
+.layout-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

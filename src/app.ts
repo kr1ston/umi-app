@@ -13,9 +13,9 @@ export function onRouteChange({ location }: { location: Location }) {
 
   const token = Cookies.get('token');
 
-  const loginPath = '/login';
-  const homePath = '/';
-  const whiteList = [loginPath, '/register', 'forget-password'];
+  const loginPath = '/agent';
+  const homePath = '/agent';
+  const whiteList = [loginPath, '/register', '/forget-password', '/chat'];
 
   if (token) {
     if (pathname === loginPath) {
